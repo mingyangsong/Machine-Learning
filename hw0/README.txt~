@@ -1,0 +1,31 @@
+Andrew ID:mingyans
+
+To test and get k for best result I took three steps:
+1)Write an exp.py file where making a for loop for k from 2 to 500(because k<2 doesn't make sense)
+2)Print all the k and the accuracy result
+3)Sort the result according to accuracy and get all the results
+
+Following is part of the sorted results which shows the largest 19 situations.
+[0.52380952381000001, 'K=', '479\n']
+[0.52587991718399996, 'K=', '17\n']
+[0.52681388012599994, 'K=', '183\n']
+[0.52811244979899996, 'K=', '2\n']
+[0.52860411899299997, 'K=', '63\n']
+[0.52867830423899997, 'K=', '99\n']
+[0.52941176470600004, 'K=', '466\n']
+[0.52978056426300002, 'K=', '181\n']
+[0.53333333333300004, 'K=', '470\n']
+[0.54545454545500005, 'K=', '467\n']
+[0.54838709677399999, 'K=', '469\n']
+[0.5625, 'K=', '468\n']
+[0.57142857142900005, 'K=', '493\n']
+[0.66666666666700003, 'K=', '494\n']
+[0.80000000000000004, 'K=', '495\n']
+[1.0, 'K=', '496\n']
+[1.0, 'K=', '497\n']
+[1.0, 'K=', '498\n']
+[1.0, 'K=', '499\n']
+
+From above, we need to pick a reasonable situation which means if you pic "K=499" you have only one predictor based on the data file, which does not make any sense. 
+We need to consider 1)number of predictors is not too small 2)K is not too large which means you do not have to pick so many days for prediction.
+Therefore, I pick 2, 17, 63, 99, 181 firstly. Amoung these 5 situations, I choose 99 which make the accuracy large enough and sample number large enough, also you do not need too many days(like >100) to predict.
